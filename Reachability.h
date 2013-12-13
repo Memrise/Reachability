@@ -56,8 +56,6 @@
 #define NS_ENUM(_type, _name) enum _name : _type _name; enum _name : _type
 #endif
 
-extern NSString *const kReachabilityChangedNotification;
-
 typedef NS_ENUM(NSInteger, NetworkStatus) {
     // Apple NetworkStatus Compatible Names.
     NotReachable = 0,
@@ -105,5 +103,7 @@ typedef void (^NetworkUnreachable)(Reachability * reachability);
 -(SCNetworkReachabilityFlags)reachabilityFlags;
 -(NSString*)currentReachabilityString;
 -(NSString*)currentReachabilityFlags;
+
++(NSString*)getReachabilityChangedNotificationKey;
 
 @end
