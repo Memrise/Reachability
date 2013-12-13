@@ -524,4 +524,9 @@ static void TMReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkRea
     return description;
 }
 
++ (NSString*)getReachabilityChangedNotificationKey
+{
+	return 	kReachabilityChangedNotification;
+}
+
 @end
